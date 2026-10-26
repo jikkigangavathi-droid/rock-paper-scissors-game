@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game">
+    <p class="eyebrow">CLASSIC GAME</p>
+    <h1>Rock Paper Scissors</h1>
+    <p class="subtitle">Choose your move and challenge the computer!</p>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score-card">
+        <span class="score-label">YOU</span>
+        <strong id="player-score">0</strong>
+      </div>
+      <div class="score-divider">:</div>
+      <div class="score-card">
+        <span class="score-label">COMPUTER</span>
+        <strong id="computer-score">0</strong>
+      </div>
+    </section>
+
+    <section class="choices" aria-label="Choose your move">
+      <button class="choice" data-choice="rock" aria-label="Choose rock">
+        <span class="emoji">✊</span><span>Rock</span>
+      </button>
+      <button class="choice" data-choice="paper" aria-label="Choose paper">
+        <span class="emoji">✋</span><span>Paper</span>
+      </button>
+      <button class="choice" data-choice="scissors" aria-label="Choose scissors">
+        <span class="emoji">✌️</span><span>Scissors</span>
+      </button>
+    </section>
+
+    <section class="result-panel" aria-live="polite">
+      <p id="result-title">Make your move!</p>
+      <p id="result-message">First to make a move starts the game.</p>
+      <div class="moves">
+        <span id="player-move">You: —</span>
+        <span id="computer-move">Computer: —</span>
+      </div>
+    </section>
+
+    <button id="reset-button" class="reset-button">Reset Score</button>
+    <p class="rules">Rock beats scissors · Paper beats rock · Scissors beats paper</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
